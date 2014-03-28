@@ -25,32 +25,16 @@ int size;
     _scroll.contentSize = CGSizeMake(size, size);
     _scroll.contentOffset = CGPointMake(size/2,size/2);
     [self createStart];
-    
-//    _pointsArray = [[NSMutableArray alloc]init];
-//    for (int i = 0;i < MAXFLOAT; i++) {
-//        for (int j = 0; j<MAXFLOAT; j++) {
-//            [_pointsArray addObject:[NSValue valueWithCGPoint:CGPointMake(150 * i, 150 * j)]];
-//        }
-//    }
+
     
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void)createStart{
-//    for (int i = 0; i < 4; i++) {
-//        for (int j = 0; j < 4; j++) {
-//            UIView * view = [[UIView alloc]init];
-//            [view setBackgroundColor:[UIColor redColor]];
-//            [view setFrame:CGRectMake(size/2+150*i, size/2+150*j, 150, 150)];
-//            [_scroll addSubview:view];
-//        }
-//    }
-//    _scroll.bounces = NO;
     _pointsArray = [[NSMutableArray alloc]init];
     _cellsArray = [[NSMutableArray alloc]init];
     [self setDataImagesForWatching];
@@ -79,7 +63,9 @@ int size;
             
             CellVC * view = [[CellVC alloc] initWithNibName:@"CellVC" bundle:nil];
             [view.view setFrame:CGRectMake(size/2+150*i, size/2+150*j, 150, 150)];
-            
+            NSString * imageName = [NSString stringWithFormat:@"test_%d.jpg",[self getRandomNumberBetween:0 to:2]];
+            [view.image setFrame:CGRectMake(0, 0, view.view.frame.size.width, view.view.frame.size.height)];
+            view.image.image = [UIImage imageNamed:imageName];
             [_pointsArray addObject:[NSValue valueWithCGPoint:CGPointMake(size/2+150*i, size/2+150*j)]];
             
             [view.view setBackgroundColor:[UIColor redColor]];
@@ -159,7 +145,9 @@ int size;
                     [viewPoint.view setBackgroundColor:[UIColor blackColor]];
                     viewPoint.view.tag = iterator;
                     // тестовая картинка
-                    viewPoint.image.image = [UIImage imageNamed:@"test.jpg"];
+                    NSString * imageName = [NSString stringWithFormat:@"test_%d.jpg",[self getRandomNumberBetween:0 to:2]];
+                    [viewPoint.image setFrame:CGRectMake(0, 0, viewPoint.view.frame.size.width, viewPoint.view.frame.size.height)];
+                    viewPoint.image.image = [UIImage imageNamed:imageName];
                     viewPoint.adjacentPoints = [viewPoint cellAdjacentPoints];
                     
                     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapGestureCaptured:)];
@@ -179,6 +167,9 @@ int size;
     }
 }
 
+-(int)getRandomNumberBetween:(int)from to:(int)to {
+    return (int)from + arc4random() % (to-from+1);
+}
 
 -(void)removePointFromArrays:(CGPoint)point{
     // удаление точек размещенных ячеек

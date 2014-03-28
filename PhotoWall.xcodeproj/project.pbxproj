@@ -24,7 +24,9 @@
 		F02EC93F18E18A980054C833 /* PhotoWallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F02EC93E18E18A980054C833 /* PhotoWallTests.m */; };
 		F0B32CB118E4499B008E9AD2 /* CellVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B32CAF18E4499B008E9AD2 /* CellVC.m */; };
 		F0B32CB218E4499B008E9AD2 /* CellVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B32CB018E4499B008E9AD2 /* CellVC.xib */; };
-		F0B8D70E18E46A0100CA46DD /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0B8D70D18E46A0100CA46DD /* test.jpg */; };
+		F0B8D70E18E46A0100CA46DD /* test_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0B8D70D18E46A0100CA46DD /* test_0.jpg */; };
+		F0B8D71018E57BC900CA46DD /* test_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0B8D70F18E57BC900CA46DD /* test_2.jpg */; };
+		F0B8D71218E57BD100CA46DD /* test_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0B8D71118E57BD100CA46DD /* test_1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +63,9 @@
 		F0B32CAE18E4499B008E9AD2 /* CellVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellVC.h; sourceTree = "<group>"; };
 		F0B32CAF18E4499B008E9AD2 /* CellVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellVC.m; sourceTree = "<group>"; };
 		F0B32CB018E4499B008E9AD2 /* CellVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellVC.xib; sourceTree = "<group>"; };
-		F0B8D70D18E46A0100CA46DD /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		F0B8D70D18E46A0100CA46DD /* test_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_0.jpg; sourceTree = "<group>"; };
+		F0B8D70F18E57BC900CA46DD /* test_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_2.jpg; sourceTree = "<group>"; };
+		F0B8D71118E57BD100CA46DD /* test_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +125,9 @@
 		F02EC91618E18A960054C833 /* PhotoWall */ = {
 			isa = PBXGroup;
 			children = (
-				F0B8D70D18E46A0100CA46DD /* test.jpg */,
+				F0B8D70D18E46A0100CA46DD /* test_0.jpg */,
+				F0B8D71118E57BD100CA46DD /* test_1.jpg */,
+				F0B8D70F18E57BC900CA46DD /* test_2.jpg */,
 				F02EC91F18E18A960054C833 /* AppDelegate.h */,
 				F02EC92018E18A960054C833 /* AppDelegate.m */,
 				F02EC92218E18A960054C833 /* Main_iPhone.storyboard */,
@@ -244,9 +250,11 @@
 			files = (
 				F02EC92718E18A970054C833 /* Main_iPad.storyboard in Resources */,
 				F0B32CB218E4499B008E9AD2 /* CellVC.xib in Resources */,
-				F0B8D70E18E46A0100CA46DD /* test.jpg in Resources */,
+				F0B8D70E18E46A0100CA46DD /* test_0.jpg in Resources */,
 				F02EC92C18E18A970054C833 /* Images.xcassets in Resources */,
+				F0B8D71218E57BD100CA46DD /* test_1.jpg in Resources */,
 				F02EC92418E18A960054C833 /* Main_iPhone.storyboard in Resources */,
+				F0B8D71018E57BC900CA46DD /* test_2.jpg in Resources */,
 				F02EC91B18E18A960054C833 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +415,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoWall/PhotoWall-Prefix.pch";
 				INFOPLIST_FILE = "PhotoWall/PhotoWall-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -420,6 +429,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoWall/PhotoWall-Prefix.pch";
 				INFOPLIST_FILE = "PhotoWall/PhotoWall-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
