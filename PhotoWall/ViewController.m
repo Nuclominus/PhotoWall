@@ -148,7 +148,7 @@ int size;
             if (CGRectContainsPoint(screenRect,pointValue.CGPointValue)) {
                 if (![_pointsArray containsObject:(NSValue*)cellarray[j]]) {
                     CellVC * viewPoint = [[CellVC alloc]init];
-                    [viewPoint.view setFrame:CGRectMake(pointValue.CGPointValue.x,pointValue.CGPointValue.y, 150, 150)];
+                    [viewPoint.view setFrame:CGRectMake(pointValue.CGPointValue.x+75,pointValue.CGPointValue.y+75, 150, 150)];
                     [viewPoint.view setBackgroundColor:[UIColor blackColor]];
                     viewPoint.view.tag = iterator;
                     // тестовая картинка
