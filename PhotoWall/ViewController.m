@@ -133,9 +133,14 @@ int size;
     }
 }
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    _lastContentOffset = scrollView.contentOffset;
+}
+
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     NSLog(@"Scroll veloscity x = %f, y = %f",_scroll.contentOffset.x ,_scroll.contentOffset.y);
     CGRect screenRect = CGRectMake(scrollView.contentOffset.x, scrollView.contentOffset.y, SCREEN_W, SCREEN_H);
+    self.lastContentOffset = scrollView.contentOffset;
     
     // проверка и добавление новых ячеек
     NSUInteger count = _cellsArray.count;
@@ -145,10 +150,12 @@ int size;
         NSMutableArray * cellarray = cell.adjacentPoints;
         for (int j = 0; j<cellarray.count-1;j++) {
             NSValue* pointValue = ((NSValue*)cellarray[j]);
+            // попадает ли точка в экран
             if (CGRectContainsPoint(screenRect,pointValue.CGPointValue)) {
+                // проверяем не зянята ли точка
                 if (![_pointsArray containsObject:(NSValue*)cellarray[j]]) {
                     CellVC * viewPoint = [[CellVC alloc]init];
-                    [viewPoint.view setFrame:CGRectMake(pointValue.CGPointValue.x+75,pointValue.CGPointValue.y+75, 150, 150)];
+                    [viewPoint.view setFrame:CGRectMake(pointValue.CGPointValue.x-75,pointValue.CGPointValue.y-75, 150, 150)];
                     [viewPoint.view setBackgroundColor:[UIColor blackColor]];
                     viewPoint.view.tag = iterator;
                     // тестовая картинка
@@ -171,6 +178,7 @@ int size;
         }
     }
 }
+
 
 -(void)removePointFromArrays:(CGPoint)point{
     // удаление точек размещенных ячеек

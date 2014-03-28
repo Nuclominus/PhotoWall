@@ -129,9 +129,9 @@
 				F02EC92818E18A970054C833 /* ViewController.h */,
 				F02EC92918E18A970054C833 /* ViewController.m */,
 				F0B32CAE18E4499B008E9AD2 /* CellVC.h */,
+				F0B32CAF18E4499B008E9AD2 /* CellVC.m */,
 				F0B32CB018E4499B008E9AD2 /* CellVC.xib */,
 				F02EC92B18E18A970054C833 /* Images.xcassets */,
-				F0B32CAF18E4499B008E9AD2 /* CellVC.m */,
 				F02EC91718E18A960054C833 /* Supporting Files */,
 			);
 			path = PhotoWall;

@@ -19,15 +19,15 @@
     int stroke;
     int line;
 }
-@property(nonatomic)        BOOL firstTime;
-@property(nonatomic)        BOOL firstShow;
-@property(nonatomic,strong) NSMutableArray * cellsArray;
-@property(nonatomic,strong) id delegate;
-@property(nonatomic,strong) IBOutlet UIView * mainView;
-@property(nonatomic,strong) IBOutlet UIScrollView * scrollView;
-@property(nonatomic,strong) IBOutlet UIView * contentView;
-@property(nonatomic,strong) NSMutableArray * dataArray;
-
+@property(nonatomic)         BOOL firstTime;
+@property(nonatomic)         BOOL firstShow;
+@property(nonatomic,strong)  NSMutableArray * cellsArray;
+@property(nonatomic,strong)  id delegate;
+@property(nonatomic,strong)  IBOutlet UIView * mainView;
+@property(nonatomic,strong)  IBOutlet UIScrollView * scrollView;
+@property(nonatomic,strong)  IBOutlet UIView * contentView;
+@property(nonatomic,strong)  NSMutableArray * dataArray;
+@property(nonatomic)         CGPoint lastContentOffset;
 @property(nonatomic, strong) IBOutlet UIScrollView *scroll;
 @property(nonatomic, strong) NSMutableArray * pointsArray;
 
