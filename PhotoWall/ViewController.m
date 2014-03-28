@@ -68,7 +68,6 @@ int size;
             view.image.image = [UIImage imageNamed:imageName];
             [_pointsArray addObject:[NSValue valueWithCGPoint:CGPointMake(size/2+150*i, size/2+150*j)]];
             
-            [view.view setBackgroundColor:[UIColor redColor]];
             [self.scrollView addSubview:view.view];
             [view.indicator startAnimating];
             [_cellsArray addObject:view];
@@ -142,7 +141,7 @@ int size;
                 if (![_pointsArray containsObject:(NSValue*)cellarray[j]]) {
                     CellVC * viewPoint = [[CellVC alloc]init];
                     [viewPoint.view setFrame:CGRectMake(pointValue.CGPointValue.x-75,pointValue.CGPointValue.y-75, 150, 150)];
-                    [viewPoint.view setBackgroundColor:[UIColor blackColor]];
+                    
                     viewPoint.view.tag = iterator;
                     // тестовая картинка
                     NSString * imageName = [NSString stringWithFormat:@"test_%d.jpg",[self getRandomNumberBetween:0 to:2]];

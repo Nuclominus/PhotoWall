@@ -21,10 +21,10 @@
         if (self) {
             self.image = [[UIImageView alloc]init];
             [_image setFrame:CGRectMake(0, 0, 150, 150)];
-            [_image setBackgroundColor:[UIColor redColor]];
+//            [_image setBackgroundColor:[UIColor redColor]];
             
             _indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-            [_indicator setColor:[UIColor blackColor]];
+//            [_indicator setColor:[UIColor blackColor]];
             [_indicator setFrame:CGRectMake(0,0, 30, 30)];
         }
 
